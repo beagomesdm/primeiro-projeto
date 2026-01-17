@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro projeto funcional</title>
+    <style>
+        body {
+            background-color: cadetblue;
+            color: black;
+            font: normal 20px Courier;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> RPG - APARIÇÃO DE UM MONSTRO</h1>
+    <p> Apenas salve-se! </p>
+    <img id="imagemvitoria" src="venceu.webp" style="display:none; width:500px;">  <!--criei uma imagem com id, o src buscou a fonte, o style eu dei a funçao 
+    de nao aparecer nada ate eu dar o comando de aparecer dnv. (dei o comando no script)-->
+
+
+    <script>
+        // 1. Pede os valores (sempre vêm como texto/string)
+        var vida = 100;
+        alert(`Um monstro apareceu! sua vida é ${vida}`); 
+        vida -= 20; // diminui o valor da minha vida q ja era 100 menos 20.
+        alert(`o monstro te atacou, voce perdeu 20 de vida. Agora tem ${vida}`); //agora tenho 80, pois tirei 20 do valor que eu ja tinha 
+        var pocoes = 0; // criei uma variavel com valor zero, para depois incrementar com ++ 
+        pocoes++; // como o valor dela ja era zero, incrementei com ++ e ela adicionou UM ao valor que ja existia.
+        alert(`voce achou uma poção, agora voce tem ${pocoes} no inventario`); // aqui ele mostrou que tenho uma poçao.
+        confirm("Deseja usar a poção para subir de HP?"); // criei a janela de confirmacao para subir a vida.
+        vida += 50; // eu ja tinha 80 de vida, adicionei + = ao que eu ja tinha, ou seja... 130! 
+        alert(`você subiu de HP, agora voce tem ${vida} de vida`); //emiti um alerta para dizer quanto fiquei de vida.
+        pocoes--; // utilizei o -- para subtrair o que eu tinha de poçao, ou seja, usei e fiquei com 0.
+        alert(`voce utilizou sua poção do inventario, agora você tem o total de: ${pocoes}`);
+
+        var foto = document.getElementById("imagemvitoria"); //* criei uma variavel foto, essa variavel foi buscar o elemento pelo ID que criei.
+        foto.style.display = "block"; /* esse comando faz aparecer a foto somente depois de todos os comandos. (porque esta na ultima linha)
+        o JS executa tudo de linha a linha, se este comando estivesse em cima, seria executado na hora. 
+        apareceria logo de inicio no site. o block tem efeito contrario, a foto estava invisivel e eu dei o comando de "apareça" */
+        
+
+    </script>
+
+</body>
+
+</html>
